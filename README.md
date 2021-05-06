@@ -89,4 +89,4 @@ Em suma, o projeto não foi finalizado da forma que eu mais gostaria, mas consid
 
 ## Deploy:
 
-Se der tudo ocorrer bem a aplicação deve estar rodando na URL https://tradus-miniprojeto-frontend.herokuapp.com/
+Estou com dificuldades em fazer deploy mas caso consigo resolver os erros, a aplicação deve estar rodando na URL https://tradus-miniprojeto.herokuapp.com/
