@@ -144,7 +144,8 @@ export default defineComponent({
 			this.editing.id = user.id
 			this.editing.name = user.name
 		},
-		edit() {
+		edit(e: Event) {
+			e.preventDefault()
 			axios.patch(`/users/${this.editing.id}`, this.editing).then(() => {
 				this.editing.id = 0
 				this.editing.name = ''
