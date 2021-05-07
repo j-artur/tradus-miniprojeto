@@ -44,7 +44,6 @@ async function main() {
 		app.use(express.static(path.join(__dirname, '..', 'public')))
 
 		app.get(/.*/, (_req, res) => {
-			console.log('Serving static asset:', path.join(__dirname, '../public/') + 'index.html')
 			res.sendFile('index.html')
 		})
 	}
