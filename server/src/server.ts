@@ -1,6 +1,7 @@
 import cors from 'cors'
 import dotenv from 'dotenv'
 import express from 'express'
+import path from 'path'
 import 'reflect-metadata'
 import { createConnection, getRepository } from 'typeorm'
 import { User } from './models/user'
@@ -40,10 +41,11 @@ async function main() {
 	app.use(router)
 
 	if (process.env.NODE_ENV === 'production') {
-		app.use(express.static(__dirname + '/public/'))
+		app.use(express.static(path.join(__dirname, '..', 'public')))
 
 		app.get(/.*/, (_req, res) => {
-			res.sendFile(__dirname + '/public/index.html')
+			console.log('Serving static asset:', path.join(__dirname, '../public/') + 'index.html')
+			res.sendFile('index.html')
 		})
 	}
 
